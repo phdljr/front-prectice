@@ -1,0 +1,39 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main,
+footer {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+main {
+  flex: 1;
+  background-color: #e0e0e0;
+}
+
+/* 빨간 테두리의 컨테이너 */
+.container {
+  position: fixed; /* 다른 요소와 상관없이 떠있음 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 60vw; /* 브라우저 너비의 60% */
+  max-width: 800px; /* 최대 너비 제한 */
+  height: 80vh; /* 높이는 필요에 따라 */
+  border: 2px solid red;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
