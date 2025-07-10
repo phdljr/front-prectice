@@ -37,3 +37,24 @@ main {
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+.box {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: orange;
+  margin: 50px auto;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  left: 0; /* 박스 밖으로 튀어나오게 */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 20px solid white; /* 삼각형 색 */
+}
