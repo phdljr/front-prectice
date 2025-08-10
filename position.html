@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>드롭다운 테스트</title>
+    <style>
+      /* 초기화 */
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      /* 메뉴 스타일 */
+      .menu {
+        background: #333;
+        display: flex;
+      }
+
+      .menu > li {
+        position: relative;
+      }
+
+      .menu > li > a {
+        display: block;
+        padding: 14px 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .menu > li:hover {
+        background: #444;
+      }
+
+      /* 드롭다운 기본 감춤 */
+      .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #444;
+        min-width: 150px;
+      }
+
+      .submenu li a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+      }
+
+      .submenu li a:hover {
+        background: #555;
+      }
+
+      /* 호버 시 표시 */
+      .menu > li:hover .submenu {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="#">메인1</a></li>
+      <li>
+        <a href="#">메인2</a>
+        <ul class="submenu">
+          <li><a href="#">서브2-1</a></li>
+          <li><a href="#">서브2-2</a></li>
+        </ul>
+      </li>
+      <li><a href="#">메인3</a></li>
+    </ul>
+  </body>
+</html>
